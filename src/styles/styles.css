@@ -1,0 +1,27 @@
+.button {
+     -fx-background-color: #39A9DB;
+     -fx-text-fill: white;
+     -fx-padding: 10px;
+     -fx-cursor: pointer;
+     -fx-font-family: algerian;
+}
+
+.button:hover {
+    -fx-background-color: #40BCD8;
+}
+
+
+.column {
+    -fx-background-color: #40BCD8;
+    -fx-text-fill: white;
+    -fx-color: white;
+}
+
+.title {
+    -fx-text-fill: #F39237;
+}
+
+
+#property-list-title {
+    -fx-text-fill: #F39237;
+}

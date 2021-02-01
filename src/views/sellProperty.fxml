@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="602.0" prefWidth="660.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SellProperty">
+   <children>
+      <TextArea fx:id="invoiceView" layoutX="70.0" layoutY="308.0" prefHeight="214.0" prefWidth="539.0" promptText="Generated Invoice Appears Here" />
+      <Button fx:id="completeSaleOrLease" layoutX="447.0" layoutY="539.0" mnemonicParsing="false" onAction="#completeSaleOrRent" prefHeight="34.0" prefWidth="162.0" text="Complete Sale/Rent" />
+      <Text fill="#f39237" layoutX="237.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SELL/LEASE PROPERTY">
+         <font>
+            <Font name="Algerian" size="21.0" />
+         </font>
+      </Text>
+      <Button fx:id="generateInvoice" layoutX="69.0" layoutY="539.0" mnemonicParsing="false" onAction="#generateInvoice" prefHeight="34.0" prefWidth="143.0" text="Generate Invoice" />
+      <Label layoutX="92.0" layoutY="386.0" prefHeight="17.0" prefWidth="248.0" textFill="#d63230" />
+      <GridPane fx:id="propertyPreview" layoutX="69.0" layoutY="85.0" prefHeight="101.0" prefWidth="443.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.33331298828125" minWidth="10.0" prefWidth="144.00001525878906" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.6666717529297" minWidth="10.0" prefWidth="299.99998474121094" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="117.0" text="Property Id:" />
+            <Label prefHeight="17.0" prefWidth="71.0" text="Address:" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="59.0" text="Price:" GridPane.rowIndex="2" />
+            <Label fx:id="propertyId" prefHeight="17.0" prefWidth="273.0" GridPane.columnIndex="1" />
+            <Label fx:id="propertyAddress" prefHeight="17.0" prefWidth="263.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="propertyPrice" prefHeight="17.0" prefWidth="91.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <ComboBox fx:id="selectCustomer" layoutX="70.0" layoutY="229.0" prefHeight="25.0" prefWidth="215.0" promptText="Select Customer" />
+   </children>
+</AnchorPane>
